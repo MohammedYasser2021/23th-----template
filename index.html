@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normalize all elements -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- kofum font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- cairo font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>موقع اسلامي</title>
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="header">
+      <div class="overlay"></div>
+      <div class="container">
+        <nav class="main-nav">
+          <h1 class="logo">عِبَادُ الرَّحْمَٰنِ</h1>
+          <div class="links-container">
+            <div class="bars opened">
+              <i class="fa fa-bars fa-fw"></i>
+            </div>
+            <ul class="links">
+              <li>
+                <a href="#" data-scroll=".header" class="active"
+                  >الصفحة الرئيسية
+                </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".hadith">أحاديث </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".lectures">محاضرات </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".quran">القرآن الكريم </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".pray-time"> أوقات الصلاة </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".contact"> تواصل معنا </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="fixed-nav">
+          <h1 class="logo">عِبَادُ الرَّحْمَٰنِ</h1>
+          <div class="links-container">
+            <div class="bars opened">
+              <i class="fa fa-bars fa-fw"></i>
+            </div>
+            <ul class="links">
+              <li>
+                <a href="#" data-scroll=".header" class="active"
+                  >الصفحة الرئيسية
+                </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".hadith">أحاديث </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".lectures">محاضرات </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".quran">القرآن الكريم </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".pray-time"> أوقات الصلاة </a>
+              </li>
+              <li>
+                <a href="#" data-scroll=".contact"> تواصل معنا </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header-content">
+          <p>موقع <span>عباد الرحمن</span> يرحب بكم</p>
+          <button class="start-explorer">
+            أبدأ التصفح <i class="fa fa-caret-down"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <div class="shapedivider"></div>
+    <!-- start hadith -->
+    <section class="hadith sec-padding">
+      <div class="container">
+        <h3 class="section-title">أحاديـــــث</h3>
+        <div class="hadith-container"></div>
+        <div class="hadith-btns">
+          <button class="next">التالي</button>
+          <div class="num"></div>
+          <button class="prev">السابق</button>
+        </div>
+      </div>
+    </section>
+    <!-- end hadith -->
+    <div class="shapedivider"></div>
+    <!-- start lectures -->
+    <section class="lectures sec-padding">
+      <div class="container">
+        <h3 class="section-title">محاضــــرات</h3>
+        <div class="lectures-content">
+          <div class="right"></div>
+          <div class="left">
+            <iframe
+              src=""
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <h2></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end lectures -->
+    <div class="shapedivider"></div>
+    <!-- start quran -->
+    <section class="quran sec-padding">
+      <div class="container">
+        <h3 class="section-title">القرآن الكريـــم</h3>
+        <div class="quran-container"></div>
+      </div>
+    </section>
+    <!-- end quran -->
+    <!-- start popup of surah -->
+    <div class="surah-popup">
+      <div class="close-popup">
+        <i class="fa fa-times fa-fw"></i>
+      </div>
+      <div class="surah-text"></div>
+    </div>
+    <!-- end popup of surah -->
+    <div class="shapedivider"></div>
+    <!-- start times of pray -->
+    <section class="pray-time sec-padding">
+      <div class="container">
+        <h3 class="section-title">أوقات الصـــــلاة</h3>
+        <div class="pray-time-container"></div>
+      </div>
+    </section>
+    <!-- end times of pray -->
+    <div class="shapedivider"></div>
+    <!-- start contact us -->
+    <section class="contact sec-padding">
+      <div class="container">
+        <h3 class="section-title">تواصـــل معنا</h3>
+        <form>
+          <div class="inp">
+            <input type="text" name="username" placeholder="أكتب إسمك" />
+            <input type="email" name="email" placeholder="أكتب إيميلك" />
+          </div>
+          <input type="text" name="subject" placeholder="أكتب عنوانك" />
+          <textarea name="message" placeholder="أكتب رسالتك"></textarea>
+          <input type="submit" value="تواصل معنا" />
+        </form>
+      </div>
+    </section>
+    <!-- end contact us -->
+    <!-- start footer -->
+    <footer>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill-opacity="1"
+          d="M0,224L48,218.7C96,213,192,203,288,176C384,149,480,107,576,117.3C672,128,768,192,864,197.3C960,203,1056,149,1152,144C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+      <div class="social-icons">
+        <a href="#">
+          <i class="fa fa-facebook fa-fw"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-twitter fa-fw"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-github fa-fw"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-instagram fa-fw"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-linkedin fa-fw"></i>
+        </a>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- start scroll to top -->
+    <span class="scroll-to-top">
+      <i class="fa fa-angle-double-up fa-fw"></i>
+    </span>
+    <!-- end scroll to top -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
