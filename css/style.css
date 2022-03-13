@@ -14,7 +14,7 @@ html, body{
 }
 body{
     font-family: 'Cairo', sans-serif;
-    height: 4000px;
+    height: 10000px;
 }
 ::-webkit-scrollbar{
     width: 10px;
@@ -183,7 +183,16 @@ nav{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    flex-wrap: wrap;
 }
+@media (max-width: 575px) {
+    nav.nav-quraan{
+        justify-content: center;
+        gap: 20px
+    }
+}
+
+
 
 nav .logo{
     font-family: 'Kufam', sans-serif;
@@ -278,6 +287,25 @@ div.header-content button:hover{
 div.header-content button i{
     margin-right: 5px;
     font-size: 18px;
+}
+div.header-content-btns{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.quraan-player-link{
+    padding: 7px 30px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    
+    transition: 0.3s ease-in-out;
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
 }
 .fixed-nav{
     height: 80px;
@@ -784,3 +812,107 @@ footer .social-icons i{
     background-color: var(--alt-color);
 }
 /* end scroll to top */
+
+/* start quraan page */
+
+ .player{
+     text-align: center;
+     background-color: var(--main-color);
+     padding: 30px;
+     border-radius: 7px;
+     position: sticky;
+     top: 0;
+     margin-bottom: 10px;
+     z-index: 99;
+ }
+
+ .player .ayah{
+     margin-bottom: 20px;
+     color: white;
+     font-size: 20px;
+ }
+ .player audio{
+     width: 100%;
+     margin-bottom: 20px;
+     color: #2222;
+     height: 40px;
+ }
+ audio::-webkit-media-controls-panel {
+    background-color: #56AEFF;
+  }
+  
+  audio::-webkit-media-controls-play-button {
+    display: none;
+  }
+  
+  audio::-webkit-media-controls-play-button:hover {
+    background-color: rgba(177,212,224, .7);
+  }
+ .player .quraan-btns{
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+ }
+ .player .quraan-btns .icon{
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: white;
+     cursor: pointer;
+     color: var(--main-color)
+ }
+ .player .quraan-btns .icon i{
+     pointer-events: none;
+ }
+ .quraan-surahs > div{
+     background-color: royalblue;
+     color: white;
+     margin-bottom: 15px;
+     padding: 15px;
+     width: calc(100% - 90px);
+     transition: 0.3s ease-in-out;
+     cursor: pointer;
+     position: relative;
+     counter-increment: ayah-counter;
+ }
+ .quraan-surahs > div p:nth-of-type(1){
+     margin-bottom: 10px;
+ }
+
+ .quraan-surahs > div::after{
+     content: counter(ayah-counter);
+     width: 75px;
+     height: 75px;
+     border-radius: 50%;
+     background-color: inherit;
+     font-size: 25px;
+     display: grid;
+     place-items: center;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     left: -90px;
+     transition: inherit
+ }
+ .quraan-surahs > div::before{
+     content: "";
+     border: 8px solid transparent;
+     width: 0;
+     border-right-color: royalblue;
+     position: absolute;
+     left: -8px;
+     transform: translate(-50%);
+     top: 40%;
+     transition: inherit
+ }
+ .quraan-surahs > div:hover::after, .quraan-surahs > div:hover{
+    background-color: var(--main-color);
+ }
+ .quraan-surahs > div:hover::before{
+     border-right-color: var(--main-color);
+ }
+/* end quraan page */
