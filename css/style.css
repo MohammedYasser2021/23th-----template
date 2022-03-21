@@ -814,6 +814,38 @@ footer .social-icons i{
 
 /* start quraan page */
 
+.quraanplayer .section-title::after{
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 3px;
+    background-color: var(--main-color);
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
+}
+.quraanplayer .section-title::before{
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 3px;
+    background-color: var(--main-color);
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
+}
+.quraanplayer .section-title:hover::after{
+    width: 90px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.quraanplayer .section-title:hover::before{
+    width: 150px;
+    transform: translateX(-50%);
+    left: 50%;
+}
  .player{
      text-align: center;
      background-color: var(--main-color);
